@@ -1,0 +1,586 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+
+<meta charset="utf-8">
+
+<title>Inventário | CMSM Advocacia</title>
+
+<meta name="description" content="Precisa resolver inventário? Entenda como funciona, quais documentos podem ser necessários e fale com advogado.">
+
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<meta name="robots" content="index,follow">
+
+<style>
+
+*{
+box-sizing:border-box;
+}
+
+body{
+margin:0;
+font-family:-apple-system,BlinkMacSystemFont,Arial,sans-serif;
+background:#0b1220;
+color:#e8edf6;
+line-height:1.6;
+}
+
+header{
+background:#071120;
+padding:18px 24px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+border-bottom:1px solid #1c2a44;
+gap:20px;
+}
+
+.brand{
+display:flex;
+align-items:center;
+gap:12px;
+text-decoration:none;
+color:#ffffff;
+}
+
+.brand img{
+height:52px;
+width:auto;
+display:block;
+}
+
+.brand span{
+font-weight:700;
+font-size:18px;
+line-height:1.2;
+}
+
+nav{
+display:flex;
+gap:18px;
+flex-wrap:wrap;
+}
+
+nav a{
+color:#f8f8f8;
+text-decoration:none;
+font-size:15px;
+font-weight:600;
+}
+
+nav a:hover{
+text-decoration:underline;
+}
+
+main{
+max-width:980px;
+margin:auto;
+padding:56px 24px;
+}
+
+.hero{
+text-align:center;
+padding:20px 0 10px 0;
+}
+
+.hero img{
+height:110px;
+width:auto;
+display:block;
+margin:0 auto 22px auto;
+}
+
+.hero h1{
+margin:0;
+font-size:38px;
+line-height:1.2;
+color:#ffffff;
+}
+
+.hero p{
+margin:14px auto 0 auto;
+font-size:18px;
+color:#b7c2da;
+max-width:760px;
+}
+
+.cta{
+margin-top:28px;
+display:flex;
+justify-content:center;
+gap:14px;
+flex-wrap:wrap;
+}
+
+.cta a{
+display:inline-block;
+padding:14px 22px;
+border-radius:10px;
+text-decoration:none;
+font-weight:700;
+font-size:16px;
+}
+
+.cta-primary{
+background:#25d366;
+color:#ffffff;
+}
+
+.cta-secondary{
+background:#1b2a46;
+color:#ffffff;
+}
+
+.section{
+margin-top:56px;
+}
+
+.section h2{
+font-size:28px;
+color:#ffffff;
+margin-bottom:18px;
+}
+
+.grid{
+display:grid;
+gap:24px;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+}
+
+.card{
+border:1px solid #1e2b45;
+border-radius:12px;
+padding:22px;
+background:#101a2d;
+}
+
+.card h3{
+margin-top:0;
+margin-bottom:10px;
+font-size:21px;
+color:#ffffff;
+}
+
+.card p{
+margin:0;
+font-size:15px;
+color:#b7c2da;
+}
+
+.list-box{
+border:1px solid #1e2b45;
+border-radius:12px;
+padding:22px;
+background:#101a2d;
+}
+
+.list-box ul{
+margin:0;
+padding-left:20px;
+}
+
+.list-box li{
+margin-bottom:10px;
+color:#b7c2da;
+}
+
+.highlight{
+border:1px solid #2b4b7f;
+background:#0f1f38;
+border-radius:12px;
+padding:22px;
+}
+
+.highlight p{
+margin:0;
+color:#dbe6f7;
+}
+
+.steps{
+display:grid;
+gap:24px;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+}
+
+.step{
+border:1px solid #1e2b45;
+border-radius:12px;
+padding:20px;
+background:#101a2d;
+}
+
+.step-number{
+display:inline-block;
+width:34px;
+height:34px;
+border-radius:999px;
+background:#25d366;
+color:#ffffff;
+text-align:center;
+line-height:34px;
+font-weight:700;
+margin-bottom:12px;
+}
+
+.step h3{
+margin:0 0 10px 0;
+font-size:20px;
+color:#ffffff;
+}
+
+.step p{
+margin:0;
+font-size:15px;
+color:#b7c2da;
+}
+
+.faq-item{
+border:1px solid #1e2b45;
+border-radius:12px;
+padding:18px 20px;
+background:#101a2d;
+margin-bottom:16px;
+}
+
+.faq-item strong{
+display:block;
+margin-bottom:8px;
+font-size:18px;
+color:#ffffff;
+}
+
+.faq-item p{
+margin:0;
+color:#b7c2da;
+}
+
+.contact-box{
+border:1px solid #1e2b45;
+border-radius:12px;
+padding:24px;
+background:#101a2d;
+text-align:center;
+}
+
+.contact-box p{
+color:#b7c2da;
+}
+
+footer{
+margin-top:60px;
+background:#071120;
+color:#9fb0cf;
+padding:26px 24px;
+text-align:center;
+font-size:14px;
+border-top:1px solid #1c2a44;
+}
+
+@media(max-width:800px){
+
+header{
+flex-direction:column;
+align-items:flex-start;
+gap:14px;
+}
+
+nav{
+justify-content:flex-start;
+}
+
+main{
+padding:40px 18px;
+}
+
+.hero h1{
+font-size:30px;
+}
+
+.hero p{
+font-size:16px;
+}
+
+.hero img{
+height:90px;
+}
+
+.brand span{
+font-size:16px;
+}
+
+.section h2{
+font-size:24px;
+}
+
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<a href="index.html" class="brand">
+<img src="logo.png" alt="CMSM Advocacia">
+<span>CMSM Advocacia</span>
+</a>
+
+<nav>
+<a href="index.html">Início</a>
+<a href="#como-funciona">Como funciona</a>
+<a href="#duvidas">Dúvidas</a>
+<a href="#contato">Contato</a>
+</nav>
+
+</header>
+
+<main>
+
+<section class="hero">
+
+<img src="logo.png" alt="CMSM Advocacia">
+
+<h1>Precisa resolver inventário?</h1>
+
+<p>
+Entenda como funciona o inventário, quais são os próximos passos e fale com advogado para organizar a situação da forma correta.
+</p>
+
+<div class="cta">
+<a class="cta-primary" href="https://wa.me/5512974063026?text=Olá,%20preciso%20de%20orientação%20sobre%20inventário.">Falar agora no WhatsApp</a>
+<a class="cta-secondary" href="#duvidas">Ver dúvidas frequentes</a>
+</div>
+
+</section>
+
+<section class="section">
+
+<div class="highlight">
+<p>
+Quando uma pessoa falece e deixa bens, direitos ou dívidas, normalmente é necessário organizar isso por meio de inventário. Muita gente adia por medo, por falta de informação ou porque acha que vai ser impossível resolver. Na prática, o primeiro passo é entender a situação e começar da forma certa.
+</p>
+</div>
+
+</section>
+
+<section class="section">
+
+<h2>Quando o inventário precisa ser feito</h2>
+
+<div class="list-box">
+<ul>
+<li>quando a pessoa falecida deixou imóvel, carro, dinheiro, empresa ou outros bens;</li>
+<li>quando existe patrimônio para transferir aos herdeiros;</li>
+<li>quando é preciso regularizar documentos;</li>
+<li>quando há vários herdeiros e ninguém sabe por onde começar;</li>
+<li>quando existe testamento ou dúvida sobre quem tem direito;</li>
+<li>quando você quer evitar mais problemas no futuro.</li>
+</ul>
+</div>
+
+<div class="cta">
+<a class="cta-primary" href="https://wa.me/5512974063026?text=Olá,%20quero%20entender%20como%20funciona%20o%20inventário.">Quero entender meu caso</a>
+</div>
+
+</section>
+
+<section class="section">
+
+<h2>O que normalmente entra no inventário</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Imóveis</h3>
+<p>Casa, apartamento, terreno, sítio e outros imóveis podem precisar de regularização.</p>
+</div>
+
+<div class="card">
+<h3>Veículos</h3>
+<p>Carro, moto e outros veículos também podem fazer parte do inventário.</p>
+</div>
+
+<div class="card">
+<h3>Dinheiro e contas</h3>
+<p>Conta bancária, investimentos, aplicações e outros valores podem entrar na apuração.</p>
+</div>
+
+<div class="card">
+<h3>Empresa</h3>
+<p>Quando a pessoa falecida tinha empresa ou participação societária, isso também pode precisar de análise.</p>
+</div>
+
+<div class="card">
+<h3>Dívidas</h3>
+<p>Dependendo do caso, dívidas e obrigações também precisam ser consideradas.</p>
+</div>
+
+<div class="card">
+<h3>Documentos e partilha</h3>
+<p>O inventário também serve para organizar a transferência correta do patrimônio aos herdeiros.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="como-funciona" class="section">
+
+<h2>Como funciona o atendimento</h2>
+
+<div class="steps">
+
+<div class="step">
+<div class="step-number">1</div>
+<h3>Análise inicial</h3>
+<p>Você informa quem faleceu, quem são os herdeiros e quais bens ou dúvidas existem.</p>
+</div>
+
+<div class="step">
+<div class="step-number">2</div>
+<h3>Leitura do cenário</h3>
+<p>É verificado se o caso tem bens, documentação, consenso entre os herdeiros ou algum conflito.</p>
+</div>
+
+<div class="step">
+<div class="step-number">3</div>
+<h3>Definição do caminho</h3>
+<p>É avaliado o melhor formato para conduzir a situação e organizar a regularização patrimonial.</p>
+</div>
+
+<div class="step">
+<div class="step-number">4</div>
+<h3>Condução</h3>
+<p>O caso segue com orientação e acompanhamento conforme a necessidade concreta.</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2>Por que não é bom deixar isso parado</h2>
+
+<div class="list-box">
+<ul>
+<li>porque o patrimônio fica travado;</li>
+<li>porque imóveis e outros bens continuam sem regularização;</li>
+<li>porque a falta de organização pode gerar mais conflito entre herdeiros;</li>
+<li>porque a demora costuma aumentar a dificuldade prática da solução;</li>
+<li>porque quanto antes a situação for entendida, mais fácil fica decidir o caminho.</li>
+</ul>
+</div>
+
+<div class="cta">
+<a class="cta-primary" href="https://wa.me/5512974063026?text=Olá,%20quero%20orientação%20sobre%20inventário.">Receber orientação agora</a>
+</div>
+
+</section>
+
+<section id="duvidas" class="section">
+
+<h2>Dúvidas frequentes sobre inventário</h2>
+
+<div class="faq-item">
+<strong>1. Todo inventário precisa ir para a Justiça?</strong>
+<p>Nem sempre. Isso depende da situação concreta e precisa ser analisado corretamente.</p>
+</div>
+
+<div class="faq-item">
+<strong>2. Precisa de advogado para fazer inventário?</strong>
+<p>Sim. O acompanhamento jurídico é necessário para conduzir o procedimento corretamente.</p>
+</div>
+
+<div class="faq-item">
+<strong>3. Quanto tempo demora?</strong>
+<p>Depende da situação, da documentação, dos bens e do nível de acordo ou conflito entre os envolvidos.</p>
+</div>
+
+<div class="faq-item">
+<strong>4. E se existir só um imóvel?</strong>
+<p>Mesmo assim pode ser necessário inventário para regularizar a transferência correta.</p>
+</div>
+
+<div class="faq-item">
+<strong>5. E se houver vários herdeiros?</strong>
+<p>Isso é comum. O importante é entender a situação e organizar o procedimento da forma adequada.</p>
+</div>
+
+<div class="faq-item">
+<strong>6. Se houver briga entre os herdeiros, ainda dá para resolver?</strong>
+<p>Sim, mas o caminho pode exigir uma condução diferente.</p>
+</div>
+
+<div class="faq-item">
+<strong>7. Dinheiro em conta bancária também entra?</strong>
+<p>Pode entrar, assim como outros valores e direitos deixados pela pessoa falecida.</p>
+</div>
+
+<div class="faq-item">
+<strong>8. Carro também entra no inventário?</strong>
+<p>Sim, em regra veículos também precisam ser regularizados.</p>
+</div>
+
+<div class="faq-item">
+<strong>9. E se a pessoa falecida tinha dívidas?</strong>
+<p>Isso também precisa ser considerado na análise do caso.</p>
+</div>
+
+<div class="faq-item">
+<strong>10. E se existir testamento?</strong>
+<p>A existência de testamento muda a análise e precisa ser verificada com atenção.</p>
+</div>
+
+<div class="faq-item">
+<strong>11. Dá para começar mesmo sem toda a documentação em mãos?</strong>
+<p>Em muitos casos, sim. O primeiro passo é entender o cenário e ver o que falta providenciar.</p>
+</div>
+
+<div class="faq-item">
+<strong>12. Posso conversar antes de decidir qualquer coisa?</strong>
+<p>Sim. Isso ajuda a entender a situação antes de tomar qualquer providência.</p>
+</div>
+
+</section>
+
+<section id="contato" class="section">
+
+<h2>Fale agora e entenda sua situação</h2>
+
+<div class="contact-box">
+<p>
+Para facilitar, envie no WhatsApp:
+</p>
+
+<div class="list-box" style="text-align:left; margin-top:18px;">
+<ul>
+<li>sua cidade;</li>
+<li>quem faleceu;</li>
+<li>quem são os herdeiros;</li>
+<li>quais bens existem, se souber;</li>
+<li>um resumo curto da situação.</li>
+</ul>
+</div>
+
+<p style="margin-top:22px;">
+Entrando em contato, também será possível esclarecer outras dúvidas sobre o seu caso.
+</p>
+
+<div class="cta">
+<a class="cta-primary" href="https://wa.me/5512974063026?text=Olá,%20vim%20pela%20página%20de%20inventário%20e%20quero%20entender%20meu%20caso.">Falar com advogado no WhatsApp</a>
+</div>
+</div>
+
+</section>
+
+</main>
+
+<footer>
+© 2026 CMSM Advocacia
+</footer>
+
+</body>
+</html>
