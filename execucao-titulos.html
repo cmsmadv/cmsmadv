@@ -1,0 +1,586 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+
+<meta charset="utf-8">
+
+<title>Execução de Títulos | CMSM Advocacia</title>
+
+<meta name="description" content="Precisa cobrar uma dívida ou executar um título? Entenda como funciona e fale com advogado.">
+
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<meta name="robots" content="index,follow">
+
+<style>
+
+*{
+box-sizing:border-box;
+}
+
+body{
+margin:0;
+font-family:-apple-system,BlinkMacSystemFont,Arial,sans-serif;
+background:#0b1220;
+color:#e8edf6;
+line-height:1.6;
+}
+
+header{
+background:#071120;
+padding:18px 24px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+border-bottom:1px solid #1c2a44;
+gap:20px;
+}
+
+.brand{
+display:flex;
+align-items:center;
+gap:12px;
+text-decoration:none;
+color:#ffffff;
+}
+
+.brand img{
+height:52px;
+width:auto;
+display:block;
+}
+
+.brand span{
+font-weight:700;
+font-size:18px;
+line-height:1.2;
+}
+
+nav{
+display:flex;
+gap:18px;
+flex-wrap:wrap;
+}
+
+nav a{
+color:#f8f8f8;
+text-decoration:none;
+font-size:15px;
+font-weight:600;
+}
+
+nav a:hover{
+text-decoration:underline;
+}
+
+main{
+max-width:980px;
+margin:auto;
+padding:56px 24px;
+}
+
+.hero{
+text-align:center;
+padding:20px 0 10px 0;
+}
+
+.hero img{
+height:110px;
+width:auto;
+display:block;
+margin:0 auto 22px auto;
+}
+
+.hero h1{
+margin:0;
+font-size:38px;
+line-height:1.2;
+color:#ffffff;
+}
+
+.hero p{
+margin:14px auto 0 auto;
+font-size:18px;
+color:#b7c2da;
+max-width:760px;
+}
+
+.cta{
+margin-top:28px;
+display:flex;
+justify-content:center;
+gap:14px;
+flex-wrap:wrap;
+}
+
+.cta a{
+display:inline-block;
+padding:14px 22px;
+border-radius:10px;
+text-decoration:none;
+font-weight:700;
+font-size:16px;
+}
+
+.cta-primary{
+background:#25d366;
+color:#ffffff;
+}
+
+.cta-secondary{
+background:#1b2a46;
+color:#ffffff;
+}
+
+.section{
+margin-top:56px;
+}
+
+.section h2{
+font-size:28px;
+color:#ffffff;
+margin-bottom:18px;
+}
+
+.grid{
+display:grid;
+gap:24px;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+}
+
+.card{
+border:1px solid #1e2b45;
+border-radius:12px;
+padding:22px;
+background:#101a2d;
+}
+
+.card h3{
+margin-top:0;
+margin-bottom:10px;
+font-size:21px;
+color:#ffffff;
+}
+
+.card p{
+margin:0;
+font-size:15px;
+color:#b7c2da;
+}
+
+.list-box{
+border:1px solid #1e2b45;
+border-radius:12px;
+padding:22px;
+background:#101a2d;
+}
+
+.list-box ul{
+margin:0;
+padding-left:20px;
+}
+
+.list-box li{
+margin-bottom:10px;
+color:#b7c2da;
+}
+
+.highlight{
+border:1px solid #2b4b7f;
+background:#0f1f38;
+border-radius:12px;
+padding:22px;
+}
+
+.highlight p{
+margin:0;
+color:#dbe6f7;
+}
+
+.steps{
+display:grid;
+gap:24px;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+}
+
+.step{
+border:1px solid #1e2b45;
+border-radius:12px;
+padding:20px;
+background:#101a2d;
+}
+
+.step-number{
+display:inline-block;
+width:34px;
+height:34px;
+border-radius:999px;
+background:#25d366;
+color:#ffffff;
+text-align:center;
+line-height:34px;
+font-weight:700;
+margin-bottom:12px;
+}
+
+.step h3{
+margin:0 0 10px 0;
+font-size:20px;
+color:#ffffff;
+}
+
+.step p{
+margin:0;
+font-size:15px;
+color:#b7c2da;
+}
+
+.faq-item{
+border:1px solid #1e2b45;
+border-radius:12px;
+padding:18px 20px;
+background:#101a2d;
+margin-bottom:16px;
+}
+
+.faq-item strong{
+display:block;
+margin-bottom:8px;
+font-size:18px;
+color:#ffffff;
+}
+
+.faq-item p{
+margin:0;
+color:#b7c2da;
+}
+
+.contact-box{
+border:1px solid #1e2b45;
+border-radius:12px;
+padding:24px;
+background:#101a2d;
+text-align:center;
+}
+
+.contact-box p{
+color:#b7c2da;
+}
+
+footer{
+margin-top:60px;
+background:#071120;
+color:#9fb0cf;
+padding:26px 24px;
+text-align:center;
+font-size:14px;
+border-top:1px solid #1c2a44;
+}
+
+@media(max-width:800px){
+
+header{
+flex-direction:column;
+align-items:flex-start;
+gap:14px;
+}
+
+nav{
+justify-content:flex-start;
+}
+
+main{
+padding:40px 18px;
+}
+
+.hero h1{
+font-size:30px;
+}
+
+.hero p{
+font-size:16px;
+}
+
+.hero img{
+height:90px;
+}
+
+.brand span{
+font-size:16px;
+}
+
+.section h2{
+font-size:24px;
+}
+
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<a href="index.html" class="brand">
+<img src="logo.png" alt="CMSM Advocacia">
+<span>CMSM Advocacia</span>
+</a>
+
+<nav>
+<a href="index.html">Início</a>
+<a href="#como-funciona">Como funciona</a>
+<a href="#duvidas">Dúvidas</a>
+<a href="#contato">Contato</a>
+</nav>
+
+</header>
+
+<main>
+
+<section class="hero">
+
+<img src="logo.png" alt="CMSM Advocacia">
+
+<h1>Precisa cobrar uma dívida?</h1>
+
+<p>
+Se você tem um título, contrato, cheque, nota promissória, confissão de dívida ou outro documento que comprove o débito, pode ser possível cobrar judicialmente.
+</p>
+
+<div class="cta">
+<a class="cta-primary" href="https://wa.me/5512974063026?text=Olá,%20preciso%20de%20orientação%20sobre%20execução%20de%20título%20ou%20cobrança.">Falar agora no WhatsApp</a>
+<a class="cta-secondary" href="#duvidas">Ver dúvidas frequentes</a>
+</div>
+
+</section>
+
+<section class="section">
+
+<div class="highlight">
+<p>
+Muita gente tem um documento assinado, sabe que tem direito de receber, mas não sabe por onde começar. Em vários casos, o problema não é provar que existe a dívida. O problema é agir do jeito certo para cobrar.
+</p>
+</div>
+
+</section>
+
+<section class="section">
+
+<h2>Quando vale a pena analisar a cobrança</h2>
+
+<div class="list-box">
+<ul>
+<li>quando existe contrato assinado e a outra parte não pagou;</li>
+<li>quando há nota promissória, cheque ou confissão de dívida;</li>
+<li>quando o devedor promete pagar e nunca resolve;</li>
+<li>quando já houve várias tentativas amigáveis sem resultado;</li>
+<li>quando você quer entender se ainda dá tempo de cobrar;</li>
+<li>quando quer cobrar com mais segurança jurídica.</li>
+</ul>
+</div>
+
+<div class="cta">
+<a class="cta-primary" href="https://wa.me/5512974063026?text=Olá,%20quero%20entender%20como%20funciona%20a%20cobrança%20judicial%20de%20uma%20dívida.">Quero entender meu caso</a>
+</div>
+
+</section>
+
+<section class="section">
+
+<h2>O que pode ser analisado</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Contrato</h3>
+<p>Contrato particular ou comercial pode servir de base para cobrança, conforme o caso.</p>
+</div>
+
+<div class="card">
+<h3>Cheque</h3>
+<p>Cheque sem pagamento pode exigir análise do prazo e da melhor medida para cobrar.</p>
+</div>
+
+<div class="card">
+<h3>Nota promissória</h3>
+<p>Documento muito comum em dívidas privadas e negociações entre pessoas ou empresas.</p>
+</div>
+
+<div class="card">
+<h3>Confissão de dívida</h3>
+<p>Quando existe documento reconhecendo a dívida, a cobrança costuma ficar mais direta.</p>
+</div>
+
+<div class="card">
+<h3>Parcelas em atraso</h3>
+<p>Débitos parcelados e não pagos também podem precisar de cobrança estruturada.</p>
+</div>
+
+<div class="card">
+<h3>Medidas para localizar patrimônio</h3>
+<p>Em certos casos, além de cobrar, é necessário pensar em como buscar efetividade no recebimento.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="como-funciona" class="section">
+
+<h2>Como funciona o atendimento</h2>
+
+<div class="steps">
+
+<div class="step">
+<div class="step-number">1</div>
+<h3>Análise inicial</h3>
+<p>Você apresenta o documento, explica a dívida e informa o que já tentou fazer para receber.</p>
+</div>
+
+<div class="step">
+<div class="step-number">2</div>
+<h3>Leitura do cenário</h3>
+<p>É verificado o tipo de documento, a situação do débito e o caminho jurídico possível.</p>
+</div>
+
+<div class="step">
+<div class="step-number">3</div>
+<h3>Definição da estratégia</h3>
+<p>É avaliado se o melhor caminho é cobrança, execução ou outra medida compatível com o caso.</p>
+</div>
+
+<div class="step">
+<div class="step-number">4</div>
+<h3>Condução</h3>
+<p>O caso segue com orientação e acompanhamento, buscando a melhor efetividade possível.</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2>Por que não deixar a dívida parada</h2>
+
+<div class="list-box">
+<ul>
+<li>porque o tempo pode dificultar a cobrança;</li>
+<li>porque o devedor pode continuar sem pagar se nada for feito;</li>
+<li>porque documento sozinho não resolve o problema sem a medida correta;</li>
+<li>porque agir cedo ajuda a entender melhor o caminho disponível;</li>
+<li>porque cada caso exige análise para evitar erro de estratégia.</li>
+</ul>
+</div>
+
+<div class="cta">
+<a class="cta-primary" href="https://wa.me/5512974063026?text=Olá,%20quero%20orientação%20sobre%20cobrança%20judicial%20de%20dívida.">Receber orientação agora</a>
+</div>
+
+</section>
+
+<section id="duvidas" class="section">
+
+<h2>Dúvidas frequentes sobre execução de títulos</h2>
+
+<div class="faq-item">
+<strong>1. Todo documento serve para cobrar judicialmente?</strong>
+<p>Nem todo documento da mesma forma. É preciso analisar o que existe e qual medida cabe no caso.</p>
+</div>
+
+<div class="faq-item">
+<strong>2. Contrato assinado basta para cobrar?</strong>
+<p>Em muitos casos o contrato ajuda bastante, mas a análise depende do conteúdo do documento e da situação concreta.</p>
+</div>
+
+<div class="faq-item">
+<strong>3. Posso cobrar cheque antigo?</strong>
+<p>Depende do prazo e da situação. Isso precisa ser visto com atenção.</p>
+</div>
+
+<div class="faq-item">
+<strong>4. Nota promissória ainda vale?</strong>
+<p>Sim, mas o caso precisa ser analisado para definir a forma correta de cobrança.</p>
+</div>
+
+<div class="faq-item">
+<strong>5. Confissão de dívida ajuda?</strong>
+<p>Sim, normalmente é um documento importante para a cobrança.</p>
+</div>
+
+<div class="faq-item">
+<strong>6. Preciso primeiro tentar acordo?</strong>
+<p>Isso pode ser avaliado, mas em muitos casos também é possível partir diretamente para a medida jurídica adequada.</p>
+</div>
+
+<div class="faq-item">
+<strong>7. E se a pessoa disser que não tem dinheiro?</strong>
+<p>Isso não encerra automaticamente a questão. Cada caso exige análise para ver o caminho mais útil.</p>
+</div>
+
+<div class="faq-item">
+<strong>8. Dá para cobrar empresa e pessoa física?</strong>
+<p>Sim, a situação depende de quem é o devedor e do documento existente.</p>
+</div>
+
+<div class="faq-item">
+<strong>9. Quanto tempo demora uma cobrança judicial?</strong>
+<p>Depende do caso, do tipo de documento, da reação do devedor e das medidas necessárias.</p>
+</div>
+
+<div class="faq-item">
+<strong>10. Precisa de advogado?</strong>
+<p>Sim. A orientação jurídica é importante para definir o melhor caminho e evitar erro na cobrança.</p>
+</div>
+
+<div class="faq-item">
+<strong>11. Dá para cobrar parcela atrasada de contrato?</strong>
+<p>Sim, em muitos casos isso pode ser analisado e cobrado de forma adequada.</p>
+</div>
+
+<div class="faq-item">
+<strong>12. Posso mostrar o documento antes de decidir o que fazer?</strong>
+<p>Sim. Esse é justamente o primeiro passo mais seguro.</p>
+</div>
+
+</section>
+
+<section id="contato" class="section">
+
+<h2>Fale agora e entenda sua situação</h2>
+
+<div class="contact-box">
+<p>
+Para facilitar, envie no WhatsApp:
+</p>
+
+<div class="list-box" style="text-align:left; margin-top:18px;">
+<ul>
+<li>sua cidade;</li>
+<li>qual é o documento que existe;</li>
+<li>valor aproximado da dívida;</li>
+<li>há quanto tempo não recebe;</li>
+<li>um resumo curto da situação.</li>
+</ul>
+</div>
+
+<p style="margin-top:22px;">
+Entrando em contato, também será possível esclarecer outras dúvidas sobre o seu caso.
+</p>
+
+<div class="cta">
+<a class="cta-primary" href="https://wa.me/5512974063026?text=Olá,%20vim%20pela%20página%20de%20execução%20de%20títulos%20e%20quero%20entender%20meu%20caso.">Falar com advogado no WhatsApp</a>
+</div>
+</div>
+
+</section>
+
+</main>
+
+<footer>
+© 2026 CMSM Advocacia
+</footer>
+
+</body>
+</html>
