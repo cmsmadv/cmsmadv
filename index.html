@@ -6,17 +6,16 @@
 <meta name="description" content="Advogado online para divórcio, partilha de bens, guarda e pensão, inventário, execução de dívidas, fraudes bancárias, contratos, direito digital, mandado de segurança, consultoria jurídica e contencioso cível.">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="index,follow">
+<link rel="canonical" href="https://www.cmsm.com.br/">
 
 <style>
 *{box-sizing:border-box;}
-
 body{
 margin:0;
 font-family:-apple-system,BlinkMacSystemFont,Arial,sans-serif;
 background:#0b1220;
 color:#e8edf6;
 }
-
 header{
 background:#071120;
 padding:18px 24px;
@@ -25,7 +24,6 @@ justify-content:space-between;
 align-items:center;
 border-bottom:1px solid #1c2a44;
 }
-
 .brand{
 display:flex;
 align-items:center;
@@ -33,46 +31,38 @@ gap:12px;
 text-decoration:none;
 color:#fff;
 }
-
 .brand img{height:52px;}
-
 .brand span{
 font-family:Garamond,serif;
 font-size:20px;
 font-weight:700;
 }
-
 nav{
 display:flex;
 align-items:center;
 gap:18px;
 flex-wrap:wrap;
 }
-
 nav a{
 color:#fff;
 text-decoration:none;
 font-weight:600;
 }
-
 main{
 max-width:1200px;
 margin:auto;
 padding:50px 24px;
 }
-
 .hero{
 text-align:center;
 padding:30px 0;
 }
-
 .nome{
 font-family:Garamond,serif;
 font-size:46px;
 letter-spacing:1.5px;
 text-transform:uppercase;
 }
-
 .sub{
 font-family:Garamond,serif;
 letter-spacing:4px;
@@ -80,19 +70,16 @@ font-size:13px;
 color:#8fa3c7;
 margin-bottom:20px;
 }
-
 .hero h1{
 font-family:Garamond,serif;
 font-size:28px;
 margin:0;
 }
-
 .hero p{
 max-width:720px;
 margin:12px auto;
 color:#aebbd6;
 }
-
 .hero-cta{
 display:flex;
 justify-content:center;
@@ -100,7 +87,6 @@ gap:14px;
 flex-wrap:wrap;
 margin-top:20px;
 }
-
 .btn{
 padding:14px 22px;
 border-radius:8px;
@@ -112,36 +98,35 @@ background:#14243f;
 color:#fff;
 transition:.2s;
 }
-
 .btn:hover{
 transform:translateY(-2px);
 border-color:#3c66ff;
 }
-
 .btn-whatsapp{
 background:#25d366;
 border-color:#25d366;
 }
-
 .btn-whatsapp:hover{
 background:#1fb958;
 }
-
 .section{
 margin-top:70px;
 }
-
 .section h2{
 font-family:Garamond,serif;
 font-size:32px;
+margin-bottom:10px;
 }
-
+.section-intro{
+color:#aebbd6;
+max-width:800px;
+margin-bottom:20px;
+}
 .grid{
 display:grid;
 gap:24px;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 }
-
 .card{
 background:#101a2d;
 padding:20px;
@@ -149,45 +134,60 @@ border-radius:12px;
 border:1px solid #1e2b45;
 transition:.2s;
 }
-
 .card:hover{
 transform:translateY(-4px);
 border-color:#3c66ff;
 }
-
 .card h3{
 font-family:Garamond,serif;
 font-size:22px;
 margin-bottom:10px;
 }
-
 .card p{
 color:#b7c2da;
 }
-
 .card a{
 color:inherit;
 text-decoration:none;
 }
-
 .card-faq{
 border:1px solid #25d366;
 background:#0f1f17;
 }
-
+.grid-3{
+display:grid;
+gap:24px;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+}
+.faq-list{
+display:grid;
+gap:14px;
+}
+details{
+background:#101a2d;
+border:1px solid #1e2b45;
+border-radius:12px;
+padding:16px 18px;
+}
+summary{
+cursor:pointer;
+font-weight:700;
+}
+details p{
+margin-top:10px;
+color:#b7c2da;
+}
 .contact-grid{
 display:grid;
 gap:24px;
 grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
 }
-
 .contact-box{
 background:#101a2d;
 padding:22px;
 border-radius:12px;
 border:1px solid #1e2b45;
 }
-
 footer{
 margin-top:60px;
 background:#071120;
@@ -195,7 +195,6 @@ padding:24px;
 text-align:center;
 color:#9fb0cf;
 }
-
 footer p:first-child{
 font-family:Garamond,serif;
 font-size:20px;
@@ -208,7 +207,7 @@ color:#fff;
 
 <header>
 <a href="index.html" class="brand">
-<img src="logo.png">
+<img src="logo.png" alt="CMSM Advocacia">
 <span>CMSM Advocacia</span>
 </a>
 
@@ -224,9 +223,7 @@ color:#fff;
 <main>
 
 <section class="hero">
-
-<img src="logo.png" style="height:110px;">
-
+<img src="logo.png" style="height:110px;" alt="CMSM Advocacia">
 <div class="nome">Campos Melo & Silva Machado</div>
 <div class="sub">Advocacia</div>
 
@@ -240,40 +237,67 @@ Atendimento direto com advogado para questões familiares, patrimoniais, bancár
 <a class="btn btn-whatsapp" href="https://wa.me/5512974063026">Falar agora com advogado</a>
 <a class="btn" href="#areas">Ver áreas de atuação</a>
 </div>
-
 </section>
 
 <section id="areas" class="section">
-
 <h2>Áreas de atuação</h2>
+<p class="section-intro">
+Atuação voltada a questões familiares, sucessórias, bancárias, contratuais, digitais e contenciosas.
+</p>
 
 <div class="grid">
-
-<div class="card"><a href="divorcio-online.html"><h3>Divórcio</h3><p>Separação com orientação clara e sem desgaste desnecessário.</p></a></div>
-<div class="card"><a href="partilha-bens.html"><h3>Partilha de bens</h3><p>Divisão patrimonial segura e juridicamente estruturada.</p></a></div>
-<div class="card"><a href="guarda-pensao.html"><h3>Guarda e pensão</h3><p>Definição de guarda, convivência e alimentos.</p></a></div>
-<div class="card"><a href="inventario-online.html"><h3>Inventário</h3><p>Regularização de herança com segurança jurídica.</p></a></div>
-<div class="card"><a href="execucao-titulo-extrajudicial.html"><h3>Execução de dívidas</h3><p>Recupere valores de forma eficiente.</p></a></div>
-<div class="card"><a href="fraude-bancaria.html"><h3>Fraudes bancárias</h3><p>Recupere valores e responsabilize o banco.</p></a></div>
-<div class="card"><a href="contratos.html"><h3>Contratos</h3><p>Evite prejuízos com contratos bem estruturados.</p></a></div>
-<div class="card"><a href="direito-digital.html"><h3>Direito digital</h3><p>Problemas na internet, golpes e remoção de conteúdo.</p></a></div>
-<div class="card"><a href="mandado-seguranca.html"><h3>Mandado de segurança</h3><p>Proteção contra ilegalidades do poder público.</p></a></div>
-<div class="card"><a href="consultoria-juridica.html"><h3>Consultoria jurídica</h3><p>Entenda exatamente o que fazer antes de agir.</p></a></div>
-<div class="card"><a href="contencioso-civel.html"><h3>Contencioso cível</h3><p>Atuação judicial em conflitos diversos.</p></a></div>
+<div class="card"><a href="divorcio-online.html"><h3>Divórcio</h3><p>Separação com orientação clara.</p></a></div>
+<div class="card"><a href="partilha-bens.html"><h3>Partilha de bens</h3><p>Divisão patrimonial segura.</p></a></div>
+<div class="card"><a href="guarda-pensao.html"><h3>Guarda e pensão</h3><p>Definição de guarda e alimentos.</p></a></div>
+<div class="card"><a href="inventario-online.html"><h3>Inventário</h3><p>Regularização de herança.</p></a></div>
+<div class="card"><a href="execucao-titulo-extrajudicial.html"><h3>Execução de dívidas</h3><p>Recuperação de valores.</p></a></div>
+<div class="card"><a href="fraude-bancaria.html"><h3>Fraudes bancárias</h3><p>Responsabilização do banco.</p></a></div>
+<div class="card"><a href="contratos.html"><h3>Contratos</h3><p>Estruturação contratual.</p></a></div>
+<div class="card"><a href="direito-digital.html"><h3>Direito digital</h3><p>Problemas online.</p></a></div>
+<div class="card"><a href="mandado-seguranca.html"><h3>Mandado de segurança</h3><p>Proteção contra ilegalidade.</p></a></div>
+<div class="card"><a href="consultoria-juridica.html"><h3>Consultoria jurídica</h3><p>Orientação estratégica.</p></a></div>
+<div class="card"><a href="contencioso-civel.html"><h3>Contencioso cível</h3><p>Atuação judicial.</p></a></div>
 
 <div class="card card-faq">
 <a href="faq.html">
 <h3>Dúvidas frequentes</h3>
-<p>Entenda como funciona o atendimento e como iniciar seu caso.</p>
+<p>Como iniciar seu atendimento.</p>
 </a>
 </div>
-
 </div>
+</section>
 
+<section id="metodo" class="section">
+<h2>Forma de atuação</h2>
+
+<div class="grid-3">
+<div class="card"><h3>Análise</h3><p>Leitura técnica do caso.</p></div>
+<div class="card"><h3>Estratégia</h3><p>Definição do melhor caminho.</p></div>
+<div class="card"><h3>Execução</h3><p>Condução objetiva.</p></div>
+</div>
+</section>
+
+<section id="artigos" class="section">
+<h2>Artigos jurídicos</h2>
+
+<div class="grid-3">
+<div class="card"><h3>Inventário: prazo</h3><p>Entenda quando iniciar.</p></div>
+<div class="card"><h3>Cobrança judicial</h3><p>Quando vale a pena.</p></div>
+<div class="card"><h3>Conteúdo completo</h3><p>Veja todos os artigos.</p></div>
+</div>
+</section>
+
+<section id="faq" class="section">
+<h2>Dúvidas frequentes</h2>
+
+<div class="faq-list">
+<details><summary>O atendimento é online?</summary><p>Sim, em todo o Brasil.</p></details>
+<details><summary>Preciso de documentos?</summary><p>Não inicialmente.</p></details>
+<details><summary>Como começar?</summary><p>Via WhatsApp.</p></details>
+</div>
 </section>
 
 <section id="contato" class="section">
-
 <h2>Contato</h2>
 
 <div class="contact-grid">
@@ -289,7 +313,6 @@ Atendimento direto com advogado para questões familiares, patrimoniais, bancár
 </div>
 
 </div>
-
 </section>
 
 </main>
