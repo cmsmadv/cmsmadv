@@ -1,939 +1,263 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CMSM Advocacia | Advocacia Estratégica e Atendimento Online</title>
-  <meta name="description" content="Advocacia estratégica para divórcio, partilha de bens, guarda e pensão, inventário, execução de títulos, fraudes bancárias, direito digital, consultoria jurídica e contencioso cível. Atendimento online em todo o Brasil." />
-  <meta name="robots" content="index,follow" />
-  <meta property="og:title" content="CMSM Advocacia | Advocacia Estratégica e Atendimento Online" />
-  <meta property="og:description" content="Atendimento jurídico online em todo o Brasil, com foco em família, sucessões, cobranças, fraudes bancárias, direito digital e contencioso cível." />
-  <meta property="og:type" content="website" />
-  <meta property="og:locale" content="pt_BR" />
-  <link rel="canonical" href="https://www.cmsm.com.br/" />
-  <style>
-    :root {
-      --bg: #0f172a;
-      --bg-soft: #111827;
-      --surface: #ffffff;
-      --surface-soft: #f8fafc;
-      --text: #0f172a;
-      --muted: #475569;
-      --line: #e2e8f0;
-      --line-dark: rgba(255,255,255,0.12);
-      --accent: #16a34a;
-      --accent-dark: #15803d;
-      --gold: #b0894f;
-      --max: 1180px;
-      --radius: 16px;
-      --shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: var(--surface);
-      color: var(--text);
-      line-height: 1.6;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    .container {
-      width: min(calc(100% - 32px), var(--max));
-      margin: 0 auto;
-    }
-
-    .site-header {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      background: rgba(15, 23, 42, 0.96);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid var(--line-dark);
-    }
-
-    .site-header-inner {
-      min-height: 76px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 24px;
-    }
-
-    .brand {
-      display: inline-flex;
-      flex-direction: column;
-      gap: 2px;
-    }
-
-    .brand-title {
-      color: #ffffff;
-      font-size: 1rem;
-      font-weight: 700;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-    }
-
-    .brand-subtitle {
-      color: rgba(255,255,255,0.72);
-      font-size: 0.86rem;
-    }
-
-    .nav {
-      display: flex;
-      align-items: center;
-      gap: 22px;
-      flex-wrap: wrap;
-    }
-
-    .nav a {
-      color: rgba(255,255,255,0.84);
-      font-size: 0.95rem;
-      font-weight: 700;
-    }
-
-    .nav a:hover {
-      color: #ffffff;
-    }
-
-    .button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 46px;
-      padding: 12px 18px;
-      border-radius: 999px;
-      border: 0;
-      font-size: 0.96rem;
-      font-weight: 700;
-      cursor: pointer;
-      transition: 0.2s ease;
-    }
-
-    .button:hover {
-      transform: translateY(-1px);
-    }
-
-    .button-primary {
-      background: linear-gradient(135deg, var(--accent), var(--accent-dark));
-      color: #ffffff;
-    }
-
-    .button-secondary {
-      background: transparent;
-      color: #ffffff;
-      border: 1px solid rgba(255,255,255,0.18);
-    }
-
-    .hero {
-      background: linear-gradient(135deg, var(--bg) 0%, var(--bg-soft) 100%);
-      color: #ffffff;
-      padding: 84px 0 62px;
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 34px;
-      align-items: center;
-    }
-
-    .hero-kicker {
-      display: inline-block;
-      margin-bottom: 14px;
-      padding: 8px 12px;
-      border: 1px solid rgba(255,255,255,0.14);
-      border-radius: 999px;
-      color: rgba(255,255,255,0.88);
-      font-size: 0.84rem;
-      font-weight: 700;
-    }
-
-    .hero h1 {
-      font-size: clamp(2.2rem, 5vw, 4rem);
-      line-height: 1.06;
-      margin-bottom: 16px;
-    }
-
-    .hero p {
-      color: rgba(255,255,255,0.82);
-      font-size: 1.04rem;
-      max-width: 62ch;
-    }
-
-    .hero-actions {
-      display: flex;
-      gap: 14px;
-      flex-wrap: wrap;
-      margin-top: 26px;
-      margin-bottom: 20px;
-    }
-
-    .hero-points {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 12px;
-      list-style: none;
-    }
-
-    .hero-points li {
-      padding: 12px 14px;
-      border-radius: 14px;
-      background: rgba(255,255,255,0.06);
-      border: 1px solid rgba(255,255,255,0.08);
-      color: rgba(255,255,255,0.9);
-      font-size: 0.94rem;
-    }
-
-    .hero-card {
-      background: #ffffff;
-      color: var(--text);
-      border-radius: 20px;
-      padding: 28px;
-      box-shadow: 0 24px 60px rgba(2, 6, 23, 0.24);
-    }
-
-    .hero-card h2 {
-      font-size: 1.28rem;
-      line-height: 1.2;
-      margin-bottom: 10px;
-    }
-
-    .hero-card p {
-      color: var(--muted);
-      margin-bottom: 18px;
-      font-size: 0.96rem;
-    }
-
-    .hero-card ul {
-      list-style: none;
-      display: grid;
-      gap: 10px;
-      margin-bottom: 18px;
-    }
-
-    .hero-card li {
-      background: var(--surface-soft);
-      border: 1px solid var(--line);
-      border-radius: 12px;
-      padding: 11px 12px;
-      font-size: 0.94rem;
-    }
-
-    .hero-badges {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 10px;
-      margin-top: 14px;
-    }
-
-    .hero-badges div {
-      background: var(--bg);
-      color: #ffffff;
-      border-radius: 12px;
-      padding: 12px 10px;
-      text-align: center;
-      font-size: 0.88rem;
-    }
-
-    .hero-badges strong {
-      display: block;
-      font-size: 1rem;
-      margin-bottom: 2px;
-    }
-
-    section {
-      padding: 68px 0;
-    }
-
-    .section-title {
-      max-width: 860px;
-      margin-bottom: 28px;
-    }
-
-    .eyebrow-dark {
-      display: inline-block;
-      margin-bottom: 10px;
-      color: var(--gold);
-      font-size: 0.82rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-    }
-
-    .section-title h2 {
-      font-size: clamp(1.8rem, 4vw, 2.7rem);
-      line-height: 1.14;
-      margin-bottom: 10px;
-    }
-
-    .section-title p {
-      color: var(--muted);
-    }
-
-    .areas-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 18px;
-    }
-
-    .area-card {
-      display: block;
-      background: #ffffff;
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      padding: 22px;
-      box-shadow: var(--shadow);
-      transition: 0.2s ease;
-    }
-
-    .area-card:hover {
-      transform: translateY(-2px);
-      border-color: #cbd5e1;
-    }
-
-    .area-tag {
-      display: inline-block;
-      margin-bottom: 10px;
-      padding: 6px 10px;
-      border-radius: 999px;
-      background: #f8fafc;
-      border: 1px solid var(--line);
-      color: var(--gold);
-      font-size: 0.8rem;
-      font-weight: 700;
-    }
-
-    .area-card h3 {
-      font-size: 1.08rem;
-      margin-bottom: 8px;
-    }
-
-    .area-card p {
-      color: var(--muted);
-      font-size: 0.95rem;
-    }
-
-    .section-soft {
-      background: var(--surface-soft);
-      border-top: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
-    }
-
-    .steps {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 18px;
-    }
-
-    .step {
-      background: #ffffff;
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      padding: 22px;
-      box-shadow: var(--shadow);
-    }
-
-    .step strong {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 38px;
-      height: 38px;
-      border-radius: 999px;
-      background: var(--bg);
-      color: #ffffff;
-      font-size: 0.96rem;
-      margin-bottom: 12px;
-    }
-
-    .step h3 {
-      font-size: 1.04rem;
-      margin-bottom: 8px;
-    }
-
-    .step p {
-      color: var(--muted);
-      font-size: 0.94rem;
-    }
-
-    .articles-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 18px;
-    }
-
-    .article-box {
-      background: #ffffff;
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      padding: 22px;
-      box-shadow: var(--shadow);
-    }
-
-    .article-box h3 {
-      font-size: 1.05rem;
-      margin-bottom: 8px;
-    }
-
-    .article-box p {
-      color: var(--muted);
-      font-size: 0.94rem;
-      margin-bottom: 14px;
-    }
-
-    .article-link {
-      color: var(--bg);
-      font-weight: 700;
-    }
-
-    .cards-3 {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 18px;
-    }
-
-    .card {
-      background: #ffffff;
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      padding: 24px;
-      box-shadow: var(--shadow);
-    }
-
-    .card-number {
-      width: 42px;
-      height: 42px;
-      border-radius: 12px;
-      background: #f3f4f6;
-      color: var(--text);
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 700;
-      margin-bottom: 14px;
-    }
-
-    .card h3 {
-      font-size: 1.08rem;
-      margin-bottom: 8px;
-    }
-
-    .card p {
-      color: var(--muted);
-      font-size: 0.95rem;
-    }
-
-    .faq {
-      display: grid;
-      gap: 12px;
-    }
-
-    details {
-      border: 1px solid var(--line);
-      border-radius: 14px;
-      background: #ffffff;
-      padding: 16px 18px;
-    }
-
-    summary {
-      cursor: pointer;
-      list-style: none;
-      font-weight: 700;
-      position: relative;
-      padding-right: 22px;
-    }
-
-    summary::-webkit-details-marker {
-      display: none;
-    }
-
-    summary::after {
-      content: "+";
-      position: absolute;
-      right: 0;
-      top: 0;
-      color: var(--gold);
-      font-size: 1.1rem;
-    }
-
-    details[open] summary::after {
-      content: "−";
-    }
-
-    details p {
-      margin-top: 10px;
-      color: var(--muted);
-      font-size: 0.95rem;
-    }
-
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 20px;
-    }
-
-    .contact-box {
-      background: #ffffff;
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      padding: 24px;
-      box-shadow: var(--shadow);
-    }
-
-    .contact-box h3 {
-      font-size: 1.08rem;
-      margin-bottom: 8px;
-    }
-
-    .contact-box p {
-      color: var(--muted);
-      margin-bottom: 12px;
-      font-size: 0.95rem;
-    }
-
-    .site-footer {
-      background: #0b1220;
-      color: rgba(255,255,255,0.78);
-      padding: 28px 0 94px;
-    }
-
-    .site-footer p {
-      font-size: 0.92rem;
-      margin-bottom: 4px;
-    }
-
-    .floating-whatsapp {
-      position: fixed;
-      right: 18px;
-      bottom: 18px;
-      z-index: 1000;
-    }
-
-    .floating-whatsapp a {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-width: 62px;
-      height: 62px;
-      padding: 0 18px;
-      border-radius: 999px;
-      background: linear-gradient(135deg, #22c55e, #16a34a);
-      color: #ffffff;
-      font-weight: 700;
-      box-shadow: 0 18px 40px rgba(34,197,94,0.35);
-    }
-
-    .mobile-cta {
-      display: none;
-    }
-
-    @media (max-width: 1080px) {
-      .hero-grid,
-      .areas-grid,
-      .steps,
-      .articles-grid,
-      .cards-3,
-      .contact-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-    }
-
-    @media (max-width: 860px) {
-      .site-header-inner {
-        min-height: 72px;
-        flex-wrap: wrap;
-        justify-content: center;
-        padding: 12px 0;
-      }
-
-      .brand {
-        width: 100%;
-        align-items: center;
-      }
-
-      .nav {
-        justify-content: center;
-      }
-
-      .hero-grid,
-      .areas-grid,
-      .steps,
-      .articles-grid,
-      .cards-3,
-      .contact-grid,
-      .hero-points,
-      .hero-badges {
-        grid-template-columns: 1fr;
-      }
-
-      .hero {
-        padding-top: 58px;
-        padding-bottom: 48px;
-      }
-
-      section {
-        padding: 54px 0;
-      }
-
-      .hero-card,
-      .area-card,
-      .step,
-      .article-box,
-      .card,
-      .contact-box {
-        padding: 20px;
-      }
-
-      .floating-whatsapp {
-        display: none;
-      }
-
-      .mobile-cta {
-        display: block;
-        position: fixed;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        z-index: 1000;
-        background: rgba(255,255,255,0.97);
-        border-top: 1px solid var(--line);
-        padding: 10px 14px;
-      }
-
-      .mobile-cta a {
-        width: 100%;
-      }
-    }
-  </style>
+<meta charset="utf-8">
+<title>Advogado Online | CMSM Advocacia</title>
+<meta name="description" content="Advogado online para divórcio, inventário, contratos, execução de dívidas, fraudes bancárias e direito digital. Atendimento rápido em todo o Brasil.">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="index,follow">
+
+<style>
+*{box-sizing:border-box;}
+
+body{
+margin:0;
+font-family:-apple-system,BlinkMacSystemFont,Arial,sans-serif;
+background:#0b1220;
+color:#e8edf6;
+}
+
+header{
+background:#071120;
+padding:18px 24px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+border-bottom:1px solid #1c2a44;
+}
+
+.brand{
+display:flex;
+align-items:center;
+gap:12px;
+text-decoration:none;
+color:#fff;
+}
+
+.brand img{height:52px;}
+
+.brand span{
+font-family:Garamond,serif;
+font-size:20px;
+font-weight:700;
+}
+
+nav a{
+color:#fff;
+text-decoration:none;
+margin-left:18px;
+font-weight:600;
+}
+
+main{
+max-width:1200px;
+margin:auto;
+padding:50px 24px;
+}
+
+.hero{
+text-align:center;
+padding:30px 0;
+}
+
+.nome{
+font-family:Garamond,serif;
+font-size:46px;
+letter-spacing:1.5px;
+text-transform:uppercase;
+}
+
+.sub{
+font-family:Garamond,serif;
+letter-spacing:4px;
+font-size:13px;
+color:#8fa3c7;
+margin-bottom:20px;
+}
+
+.hero h1{
+font-family:Garamond,serif;
+font-size:28px;
+margin:0;
+}
+
+.hero p{
+max-width:720px;
+margin:12px auto;
+color:#aebbd6;
+}
+
+.cta a{
+background:#25d366;
+padding:14px 22px;
+border-radius:8px;
+color:#fff;
+font-weight:700;
+text-decoration:none;
+display:inline-block;
+margin-top:20px;
+}
+
+.section{
+margin-top:70px;
+}
+
+.section h2{
+font-family:Garamond,serif;
+font-size:32px;
+}
+
+.grid{
+display:grid;
+gap:24px;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+}
+
+.card{
+background:#101a2d;
+padding:20px;
+border-radius:12px;
+border:1px solid #1e2b45;
+transition:.2s;
+}
+
+.card:hover{
+transform:translateY(-4px);
+border-color:#3c66ff;
+}
+
+.card h3{
+font-family:Garamond,serif;
+font-size:22px;
+margin-bottom:10px;
+}
+
+.card p{
+color:#b7c2da;
+}
+
+.card a{
+color:inherit;
+text-decoration:none;
+}
+
+.card-faq{
+border:1px solid #25d366;
+background:#0f1f17;
+}
+
+footer{
+margin-top:60px;
+background:#071120;
+padding:24px;
+text-align:center;
+color:#9fb0cf;
+}
+
+footer p:first-child{
+font-family:Garamond,serif;
+font-size:20px;
+color:#fff;
+}
+</style>
 </head>
+
 <body>
-  <header class="site-header">
-    <div class="container site-header-inner">
-      <a class="brand" href="/">
-        <span class="brand-title">CMSM Advocacia</span>
-        <span class="brand-subtitle">Atendimento online em todo o Brasil</span>
-      </a>
 
-      <nav class="nav" aria-label="Navegação principal">
-        <a href="#atuacao">Atuação</a>
-        <a href="#metodo">Método</a>
-        <a href="#artigos">Artigos</a>
-        <a href="#contato">Contato</a>
-      </nav>
+<header>
+<a href="index.html" class="brand">
+<img src="logo.png" alt="CMSM Advocacia">
+<span>CMSM Advocacia</span>
+</a>
 
-      <a class="button button-primary" href="https://wa.me/5512974063026?text=Ol%C3%A1%2C%20quero%20falar%20com%20a%20CMSM%20Advocacia." target="_blank" rel="noopener noreferrer">WhatsApp</a>
-    </div>
-  </header>
+<nav>
+<a href="#areas">Atuação</a>
+<a href="#contato">Contato</a>
+</nav>
+</header>
 
-  <main>
-    <section class="hero">
-      <div class="container hero-grid">
-        <div>
-          <span class="hero-kicker">CMSM Advocacia • Atendimento online • Contato direto</span>
-          <h1>Advocacia estratégica para resolver questões patrimoniais, familiares, bancárias, contratuais e digitais</h1>
-          <p>Atendimento jurídico online em todo o Brasil, com contato direto para análise inicial, definição de estratégia e condução técnica de casos que exigem solução clara, objetiva e juridicamente segura.</p>
+<main>
 
-          <div class="hero-actions">
-            <a class="button button-primary" href="https://wa.me/5512974063026?text=Ol%C3%A1%2C%20quero%20falar%20com%20a%20CMSM%20Advocacia." target="_blank" rel="noopener noreferrer">Falar agora no WhatsApp</a>
-            <a class="button button-secondary" href="#atuacao">Ver áreas de atuação</a>
-          </div>
+<section class="hero">
 
-          <ul class="hero-points">
-            <li>Atendimento online em todo o Brasil</li>
-            <li>Contato inicial direto</li>
-            <li>Análise técnica do caso</li>
-            <li>Comunicação clara e objetiva</li>
-          </ul>
-        </div>
+<img src="logo.png" style="height:110px;" alt="CMSM Advocacia">
 
-        <aside class="hero-card">
-          <h2>Por que escolher a CMSM Advocacia</h2>
-          <p>Estrutura pensada para unir seriedade institucional, leitura clara do problema e resposta jurídica útil para quem precisa agir sem perder tempo.</p>
+<div class="nome">Campos Melo & Silva Machado</div>
+<div class="sub">Advocacia</div>
 
-          <ul>
-            <li><strong>Contato direto:</strong> o primeiro passo é objetivo, entender o problema e indicar o melhor caminho.</li>
-            <li><strong>Análise com foco prático:</strong> mais do que citar regras, a atuação parte da utilidade real da medida jurídica.</li>
-            <li><strong>Condução técnica e clara:</strong> o cliente sabe onde está, o que está sendo feito e por quê.</li>
-          </ul>
+<h1>Seu problema jurídico precisa de solução — não de enrolação</h1>
 
-          <a class="button button-primary" style="width:100%;" href="https://wa.me/5512974063026?text=Ol%C3%A1%2C%20quero%20iniciar%20meu%20atendimento." target="_blank" rel="noopener noreferrer">Iniciar atendimento</a>
+<p>
+Atendimento direto com advogado para resolver questões familiares, patrimoniais, bancárias e contratuais em todo o Brasil.
+</p>
 
-          <div class="hero-badges">
-            <div>
-              <strong>Online</strong>
-              <span>Brasil inteiro</span>
-            </div>
-            <div>
-              <strong>Direto</strong>
-              <span>sem ruído</span>
-            </div>
-            <div>
-              <strong>Estratégia</strong>
-              <span>com clareza</span>
-            </div>
-          </div>
-        </aside>
-      </div>
-    </section>
+<div class="cta">
+<a href="https://wa.me/5512974063026?text=Olá,%20preciso%20de%20ajuda%20jurídica.">
+Falar agora com advogado
+</a>
+</div>
 
-    <section id="atuacao">
-      <div class="container">
-        <div class="section-title">
-          <span class="eyebrow-dark">Áreas de atuação</span>
-          <h2>Todos os cards de serviços, como deveria estar</h2>
-          <p>Estrutura completa para família, sucessões, cobrança, bancário, digital, consultoria e contencioso.</p>
-        </div>
+</section>
 
-        <div class="areas-grid">
-          <a class="area-card" href="/divorcio-online.html">
-            <span class="area-tag">Família</span>
-            <h3>Divórcio</h3>
-            <p>Dissolução matrimonial consensual ou litigiosa, com leitura clara dos reflexos pessoais e patrimoniais.</p>
-          </a>
+<section id="areas" class="section">
 
-          <a class="area-card" href="/partilha-bens.html">
-            <span class="area-tag">Família</span>
-            <h3>Partilha de bens</h3>
-            <p>Organização patrimonial em separações e dissoluções, com foco na correta divisão de bens e direitos.</p>
-          </a>
+<h2>Áreas de atuação</h2>
 
-          <a class="area-card" href="/guarda-pensao.html">
-            <span class="area-tag">Família</span>
-            <h3>Guarda e pensão</h3>
-            <p>Definição de guarda, convivência e alimentos com análise prática da realidade familiar e do interesse envolvido.</p>
-          </a>
+<div class="grid">
 
-          <a class="area-card" href="/inventario-online.html">
-            <span class="area-tag">Sucessões</span>
-            <h3>Inventário</h3>
-            <p>Inventário judicial ou extrajudicial para regularização de herança, bens, direitos e organização sucessória.</p>
-          </a>
+<div class="card"><a href="divorcio-online.html"><h3>Divórcio</h3><p>Separação com orientação clara e sem desgaste desnecessário.</p></a></div>
 
-          <a class="area-card" href="/execucao-titulo-extrajudicial.html">
-            <span class="area-tag">Cobrança</span>
-            <h3>Execução de títulos</h3>
-            <p>Cobrança judicial e recuperação de crédito com base em documentos que permitam atuação mais direta e eficiente.</p>
-          </a>
+<div class="card"><a href="partilha-bens.html"><h3>Partilha de bens</h3><p>Divisão patrimonial segura e juridicamente estruturada.</p></a></div>
 
-          <a class="area-card" href="/fraude-bancaria.html">
-            <span class="area-tag">Bancário</span>
-            <h3>Fraudes bancárias</h3>
-            <p>Golpes, transferências indevidas, movimentações não reconhecidas e análise de responsabilização pelo prejuízo financeiro.</p>
-          </a>
+<div class="card"><a href="guarda-pensao.html"><h3>Guarda e pensão</h3><p>Definição de guarda, convivência e alimentos.</p></a></div>
 
-          <a class="area-card" href="/direito-digital.html">
-            <span class="area-tag">Digital</span>
-            <h3>Direito digital</h3>
-            <p>Conflitos em ambiente online, provas digitais, responsabilização em plataformas e questões ligadas à internet.</p>
-          </a>
+<div class="card"><a href="inventario-online.html"><h3>Inventário</h3><p>Regularização de herança com segurança jurídica.</p></a></div>
 
-          <a class="area-card" href="/consultoria-juridica.html">
-            <span class="area-tag">Estratégico</span>
-            <h3>Consultoria jurídica</h3>
-            <p>Orientação preventiva e leitura técnica de riscos para pessoas e negócios que precisam decidir com segurança.</p>
-          </a>
+<div class="card"><a href="execucao-titulo-extrajudicial.html"><h3>Execução de dívidas</h3><p>Recupere valores de forma eficiente.</p></a></div>
 
-          <a class="area-card" href="/contencioso-civel.html">
-            <span class="area-tag">Litígio</span>
-            <h3>Contencioso cível</h3>
-            <p>Atuação judicial em conflitos cíveis diversos, com condução estratégica e foco no que efetivamente interessa ao caso.</p>
-          </a>
+<div class="card"><a href="fraude-bancaria.html"><h3>Fraudes bancárias</h3><p>Recupere valores e responsabilize o banco.</p></a></div>
 
-          <a class="area-card" href="/faq.html">
-            <span class="area-tag">Operacional</span>
-            <h3>FAQ</h3>
-            <p>Entenda como funciona o atendimento, quais documentos normalmente ajudam e como iniciar a análise do seu caso.</p>
-          </a>
+<div class="card"><a href="contratos.html"><h3>Contratos</h3><p>Evite prejuízos com contratos bem estruturados.</p></a></div>
 
-          <a class="area-card" href="/artigos.html">
-            <span class="area-tag">Conteúdo</span>
-            <h3>Artigos jurídicos</h3>
-            <p>Textos e conteúdos para responder dúvidas recorrentes e reforçar a autoridade do escritório.</p>
-          </a>
+<div class="card"><a href="direito-digital.html"><h3>Direito digital</h3><p>Problemas na internet, golpes e remoção de conteúdo.</p></a></div>
 
-          <a class="area-card" href="/contato.html">
-            <span class="area-tag">Contato</span>
-            <h3>Contato</h3>
-            <p>Página de contato institucional para centralizar os canais de comunicação com o escritório.</p>
-          </a>
-        </div>
-      </div>
-    </section>
+<div class="card"><a href="mandado-seguranca.html"><h3>Mandado de segurança</h3><p>Proteção contra ilegalidades do poder público.</p></a></div>
 
-    <section class="section-soft" id="metodo">
-      <div class="container">
-        <div class="section-title">
-          <span class="eyebrow-dark">Forma de atuação</span>
-          <h2>O processo de trabalho foi organizado para reduzir ruído e dar direção jurídica real</h2>
-          <p>O foco não é complicar o problema com linguagem vazia, mas separar o que é relevante, definir estratégia e conduzir o caso com método.</p>
-        </div>
+<div class="card"><a href="consultoria-juridica.html"><h3>Consultoria jurídica</h3><p>Entenda exatamente o que fazer antes de agir.</p></a></div>
 
-        <div class="steps">
-          <article class="step">
-            <strong>1</strong>
-            <h3>Análise</h3>
-            <p>Leitura técnica da situação, dos documentos e do contexto prático para separar o que é relevante do que é ruído.</p>
-          </article>
+<div class="card"><a href="contencioso-civel.html"><h3>Contencioso cível</h3><p>Atuação judicial em conflitos diversos.</p></a></div>
 
-          <article class="step">
-            <strong>2</strong>
-            <h3>Estratégia</h3>
-            <p>Definição do caminho mais útil, dos riscos envolvidos e das alternativas disponíveis para proteger o interesse do cliente.</p>
-          </article>
+<div class="card card-faq">
+<a href="faq.html">
+<h3>Dúvidas frequentes</h3>
+<p>Entenda como funciona o atendimento e como iniciar seu caso.</p>
+</a>
+</div>
 
-          <article class="step">
-            <strong>3</strong>
-            <h3>Execução</h3>
-            <p>Atuação jurídica com comunicação objetiva, coerência de método e acompanhamento adequado à natureza do caso.</p>
-          </article>
-        </div>
-      </div>
-    </section>
+</div>
 
-    <section id="artigos">
-      <div class="container">
-        <div class="section-title">
-          <span class="eyebrow-dark">Artigos jurídicos</span>
-          <h2>Conteúdo informativo para responder dúvidas recorrentes e reforçar autoridade</h2>
-          <p>Os melhores conteúdos são os que respondem dores concretas do cliente: fraude bancária, inventário, cobrança, divórcio e situações afins.</p>
-        </div>
+</section>
 
-        <div class="articles-grid">
-          <article class="article-box">
-            <h3>Artigos do escritório</h3>
-            <p>Página própria para concentrar textos jurídicos, resumos e materiais informativos com linguagem clara e utilidade prática.</p>
-            <a class="article-link" href="/artigos.html">Ver página de artigos</a>
-          </article>
+<section id="contato" class="section">
 
-          <article class="article-box">
-            <h3>Conteúdo publicado no Jusbrasil</h3>
-            <p>Produção editorial já existente em canal externo, que pode servir como apoio de autoridade e porta de entrada para novos contatos.</p>
-            <a class="article-link" href="https://machadobruno.jusbrasil.com.br/" target="_blank" rel="noopener noreferrer">Acessar perfil no Jusbrasil</a>
-          </article>
+<h2>Fale com um advogado agora</h2>
 
-          <article class="article-box">
-            <h3>Leitura orientada por problema</h3>
-            <p>Use os conteúdos como ponto de entrada para entender o cenário e, se necessário, seguir para análise direta do caso.</p>
-            <a class="article-link" href="/artigos.html">Explorar conteúdos</a>
-          </article>
-        </div>
-      </div>
-    </section>
+<div class="cta">
+<a href="https://wa.me/5512974063026">
+Chamar no WhatsApp
+</a>
+</div>
 
-    <section class="section-soft">
-      <div class="container">
-        <div class="section-title">
-          <span class="eyebrow-dark">Sobre o escritório</span>
-          <h2>Seriedade, método e clareza para questões que exigem análise técnica</h2>
-          <p>A CMSM Advocacia presta atendimento jurídico online em todo o Brasil para situações que exigem estratégia definida, leitura técnica e comunicação objetiva. O foco é organizar a situação e indicar o melhor caminho jurídico possível.</p>
-        </div>
+</section>
 
-        <div class="cards-3">
-          <article class="card">
-            <div class="card-number">01</div>
-            <h3>Leitura objetiva do problema</h3>
-            <p>Entender logo no início o que realmente importa reduz ruído e evita medidas improdutivas.</p>
-          </article>
+</main>
 
-          <article class="card">
-            <div class="card-number">02</div>
-            <h3>Atendimento online</h3>
-            <p>Estrutura pensada para facilitar triagem, comunicação e análise inicial sem barreiras desnecessárias.</p>
-          </article>
+<footer>
+<p>CMSM Advocacia</p>
+<p>© 2026</p>
+<p>contato@cmsm.com.br</p>
+<p>Atendimento online em todo o Brasil</p>
+</footer>
 
-          <article class="card">
-            <div class="card-number">03</div>
-            <h3>Condução com lógica</h3>
-            <p>O cliente entende o cenário, os riscos e a utilidade prática da medida jurídica adotada.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="faq">
-      <div class="container">
-        <div class="section-title">
-          <span class="eyebrow-dark">FAQ</span>
-          <h2>Dúvidas frequentes</h2>
-          <p>Respostas objetivas para dúvidas que costumam aparecer antes do primeiro contato.</p>
-        </div>
-
-        <div class="faq">
-          <details>
-            <summary>O atendimento é online?</summary>
-            <p>Sim. O escritório atua com atendimento online em todo o Brasil.</p>
-          </details>
-
-          <details>
-            <summary>Preciso já ter todos os documentos?</summary>
-            <p>Não. O primeiro passo é explicar a situação. A partir disso, é possível indicar o que normalmente ajuda na análise do caso.</p>
-          </details>
-
-          <details>
-            <summary>Como iniciar a análise do meu caso?</summary>
-            <p>O caminho mais rápido é o WhatsApp, com resumo objetivo do problema e, se houver, encaminhamento dos documentos principais.</p>
-          </details>
-        </div>
-      </div>
-    </section>
-
-    <section class="section-soft" id="contato">
-      <div class="container">
-        <div class="section-title">
-          <span class="eyebrow-dark">Contato</span>
-          <h2>O caminho mais rápido para começar é pelo WhatsApp</h2>
-          <p>Também é possível encaminhar mensagem por e-mail institucional para apresentação inicial do caso e complementação de informações.</p>
-        </div>
-
-        <div class="contact-grid">
-          <article class="contact-box">
-            <h3>WhatsApp</h3>
-            <p>Canal principal para triagem inicial, explicação do problema e encaminhamento objetivo do caso.</p>
-            <a class="button button-primary" href="https://wa.me/5512974063026?text=Ol%C3%A1%2C%20quero%20falar%20com%20a%20CMSM%20Advocacia." target="_blank" rel="noopener noreferrer">Falar no WhatsApp</a>
-            <p style="margin-top:12px;">+55 12 97406-3026</p>
-          </article>
-
-          <article class="contact-box">
-            <h3>E-mail</h3>
-            <p>Contato institucional para envio de mensagem, apresentação inicial do caso e complementação de informações.</p>
-            <a class="button" style="background:#0f172a;color:#fff;" href="mailto:contato@cmsm.com.br">Enviar e-mail</a>
-            <p style="margin-top:12px;">contato@cmsm.com.br</p>
-          </article>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <p><strong>CMSM Advocacia</strong></p>
-      <p>© 2026 — Todos os direitos reservados.</p>
-      <p>WhatsApp: +55 12 97406-3026</p>
-      <p>E-mail: contato@cmsm.com.br</p>
-      <p>Atendimento online em todo o Brasil.</p>
-    </div>
-  </footer>
-
-  <div class="floating-whatsapp">
-    <a href="https://wa.me/5512974063026?text=Ol%C3%A1%2C%20quero%20falar%20com%20a%20CMSM%20Advocacia." target="_blank" rel="noopener noreferrer">WhatsApp</a>
-  </div>
-
-  <div class="mobile-cta">
-    <a class="button button-primary" href="https://wa.me/5512974063026?text=Ol%C3%A1%2C%20quero%20falar%20com%20a%20CMSM%20Advocacia." target="_blank" rel="noopener noreferrer">Falar no WhatsApp</a>
-  </div>
 </body>
 </html>
